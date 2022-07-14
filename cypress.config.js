@@ -10,6 +10,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // return require("./cypress/plugins/index.js")(on, config);
     },
-    baseUrl: "https://demoqa.com/automation-practice-form",
+    baseUrl: "https://demoqa.com/",
   },
 });

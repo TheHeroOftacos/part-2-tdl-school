@@ -13,7 +13,7 @@ class BasePage {
     return cy
       .visit(this.url)
       .then(() => this.assertIsCurrentPage(options))
-      
+      .then(() => this.closeAdvert());
   }
 
   static assertIsCurrentPage(
@@ -33,10 +33,11 @@ class BasePage {
   ) {
     return cy
       .location(options)
-      
   }
 
-  
+  static closeAdvert() {
+    return cy.get("#close-fixedban").should("be.visible").click();
+  }
 }
 
 export default BasePage;
